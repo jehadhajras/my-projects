@@ -3,8 +3,9 @@ import math
 
 # Create the main window
 root = tk.Tk()
-root.title("Scientific Calculator")
-root.geometry("400x600")
+root.title("Scientific Calculator") # Title 
+root.geometry("500x500") # The size
+root.resizable(False, False)  # This code has made the calc cannot be bigger or smaller
 
 # Variable to store the input expression
 expression = ""
@@ -47,7 +48,7 @@ def sqrt():
 entry_var = tk.StringVar()
 
 # Input display (Entry widget)
-entry = tk.Entry(root, textvariable=entry_var, font=("Arial", 24), bd=10, relief="sunken", justify="right")
+entry = tk.Entry(root, textvariable=entry_var, font=("Arial", 24), bd=20, relief="sunken", justify="right")
 entry.grid(row=0, column=0, columnspan=4)
 
 # Buttons for the calculator
